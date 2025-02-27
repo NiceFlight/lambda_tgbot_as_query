@@ -32,9 +32,9 @@ locations = load_locations()
 
 # connect to the database
 def connect_to_db():
-    region = 'ap-southeast-2'
+    region = 'region'
     dynamodb = boto3.resource('dynamodb')
-    table = dynamodb.Table('archaeosite')
+    table = dynamodb.Table('table')
     return table
 
 def get_cities(table):
