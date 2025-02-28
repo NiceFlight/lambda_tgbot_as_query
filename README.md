@@ -1,4 +1,4 @@
 telegram bot for taiwan archaeoloy site
 
-@Airline_manager_bot
+@archaeosite_bot
 enter /as to activate
