@@ -24,11 +24,11 @@ async def start(update:Update, context:ContextTypes.DEFAULT_TYPE) -> None:
 
 '''AS 查詢'''
 # 讀取 JSON 文件
-def load_locations():
-    with open('as_code.json', 'r', encoding='utf-8') as f:
-        return json.load(f)
+# def load_locations():
+#     with open('as_code.json', 'r', encoding='utf-8') as f:
+#         return json.load(f)
 
-locations = load_locations()
+# locations = load_locations()
 
 # connect to the database
 def connect_to_db():
@@ -112,7 +112,7 @@ async def button(update: Update, context: CallbackContext) -> None:
         await query.edit_message_text(text=f"You choose {town}, please choose site: ", reply_markup=reply_markup)
     else:
         city, town, site = data.split('_')
-        site_details = get_site_details(connect_to_db(), city, town, site)
+        site_details = get_site_details(TABLE, city, town, site)
         chat_id = query.message.chat.id
 
         await query.edit_message_text(text=f"You choose: {site}"), 
