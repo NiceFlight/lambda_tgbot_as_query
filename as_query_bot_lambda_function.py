@@ -66,7 +66,7 @@ TABLE = connect_to_db()
 CITIES = get_cities(TABLE)
 
 # 處理 /as 命令的函數
-async def city_buttton(update: Update, context: CallbackContext) -> None:
+async def city_button(update: Update, context: CallbackContext) -> None:
     
     # cities = list(locations.keys())
     city_keyboard = []
@@ -135,7 +135,7 @@ def lambda_handler(event, context):
 
     # 添加命令處理程序
     application.add_handler(CommandHandler('start', start))
-    application.add_handler(CommandHandler('as', city_buttton))
+    application.add_handler(CommandHandler('as', city_button))
 
     # 添加函式處理程序，過濾文本消息且非命令的消息
     application.add_handler(CallbackQueryHandler(button))
