@@ -1,4 +1,4 @@
 telegram bot for taiwan archaeoloy site
 
 @archaeosite_bot
-enter /as to activate
+enter /as to search
