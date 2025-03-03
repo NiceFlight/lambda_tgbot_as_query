@@ -66,7 +66,7 @@ TABLE = connect_to_db()
 CITIES = get_cities(TABLE)
 
 # 處理 /as 命令的函數
-async def city_button(update: Update, context: CallbackContext) -> None:
+async def cityButton(update: Update, context: CallbackContext) -> None:
     
     # cities = list(locations.keys())
     city_keyboard = []
@@ -79,7 +79,7 @@ async def city_button(update: Update, context: CallbackContext) -> None:
     await update.message.reply_text('Please choose the city: ', reply_markup=reply_markup)
 
 # 處理按鈕點擊的回調函數
-async def button(update: Update, context: CallbackContext) -> None:
+async def queryButton(update: Update, context: CallbackContext) -> None:
 
     query = update.callback_query
     await query.answer()
